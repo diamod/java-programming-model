@@ -1,0 +1,7 @@
+1、粘包、拆包是tcp固有特性，与bio、nio没有关系
+2、tcp本身就是全双工的，与bio、nio也没有关系
+3、bio最大的问题是io read／write是阻塞的，线程承载了client socket、server socket对话，很难抽出来，尤其遇到io read／write阻塞
+4、tcp socket双边如何关闭，其本质是tcp连接断开四次挥手的问题
+
+bio1、bio2、bio3 依次验证了以上4个问题，其中bio2代码可以很好的反映1、2、3 三个问题
+

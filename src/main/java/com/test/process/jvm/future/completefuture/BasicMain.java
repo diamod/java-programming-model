@@ -1,4 +1,4 @@
-package com.test.async.jdk.completefuture;
+package com.test.process.jvm.future.completefuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
